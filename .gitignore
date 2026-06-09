@@ -3,3 +3,12 @@
 .Rhistory
 *.swp
 Thumbs.db
+
+# Course session materials (kept locally, not part of the assignment repo)
+S1/
+S3/
+S4/
+S5/
+S6/
+S7/
+S8/
