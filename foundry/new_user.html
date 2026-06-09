@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundry - Apply</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script lang="Javascript">
+    // Validate password: at least 8 characters and one special character (@ # $ &)
+    function validatePassword() {
+      let password = document.getElementById("password").value;
+      let specialChars = "@#$&";
+      let containsSpecial = false;
+
+      if (password.length < 8) {
+        alert("The password must have at least 8 characters.");
+        document.getElementById("password").value = "";
+        document.getElementById("password").focus();
+        return;
+      }
+      let char = "";
+      for (char of specialChars) {
+        if (password.includes(char)) {
+          containsSpecial = true;
+        }
+      }
+      if (containsSpecial == false) {
+        alert("The password must include at least one of these characters: @ # $ &.");
+        document.getElementById("password").value = "";
+        document.getElementById("password").focus();
+      }
+    }
+
+    // Validate email: must contain '@' and cannot start with '@'
+    function validateEmail() {
+      let email = document.getElementById("email").value;
+      if (email.indexOf("@", 0) == -1) {
+        alert("The email must contain '@'.");
+        document.getElementById("email").value = "";
+        document.getElementById("email").focus();
+        return;
+      }
+      if (email.charAt(0) == "@") {
+        alert("The email cannot start with '@'.");
+        document.getElementById("email").value = "";
+        document.getElementById("email").focus();
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <div class="nav">
+    <a class="brand" href="index.html">Foundry</a>
+    <a href="index.html">Home</a>
+    <a href="how_it_works.html">How it works</a>
+    <a href="events.html">Events</a>
+    <a href="members.php">Founder Directory</a>
+    <div class="right">
+      <a href="login.html">Log in</a>
+      <a href="new_user.html">Apply</a>
+    </div>
+  </div>
+
+  <div class="page">
+    <h1>Apply to join Foundry</h1>
+
+    <!-- The form sends its data to user_reg.php using the POST method -->
+    <form class="box-form" name="register" method="POST" action="user_reg.php">
+
+      <label for="firstname">First name</label>
+      <input type="text" id="firstname" name="firstname" required>
+
+      <label for="lastname">Last name</label>
+      <input type="text" id="lastname" name="lastname" required>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" required onchange="validateEmail()">
+
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required onchange="validatePassword()">
+
+      <label for="city">City</label>
+      <input type="text" id="city" name="city">
+
+      <label for="role">I am a...</label>
+      <select id="role" name="role">
+        <option value="Technical">Technical founder</option>
+        <option value="Commercial">Commercial founder</option>
+        <option value="Domain expert">Domain expert</option>
+      </select>
+
+      <label for="industry">Industry</label>
+      <input type="text" id="industry" name="industry">
+
+      <label for="looking_for">I am looking for...</label>
+      <input type="text" id="looking_for" name="looking_for" placeholder="e.g. a technical co-founder">
+
+      <label for="bio">Short bio</label>
+      <textarea id="bio" name="bio"></textarea>
+
+      <div class="actions">
+        <input class="button" type="submit" value="Register">
+        <a class="button grey" href="login.html">Already have an account?</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

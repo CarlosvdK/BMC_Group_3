@@ -1,0 +1,145 @@
+/* style.css - shared styling for the whole Foundry site. Kept simple on purpose. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background-color: #f4f6fb;
+}
+
+/* ---------- Navigation bar ---------- */
+.nav {
+  background-color: #0a1f44;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.nav .brand {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.nav a {
+  color: #cdd6ea;
+  text-decoration: none;
+  font-size: 15px;
+}
+.nav a:hover { color: #ffffff; }
+.nav .right { margin-left: auto; display: flex; gap: 18px; }
+
+/* ---------- Generic page wrapper ---------- */
+.page { width: 100%; margin: 0; padding: 30px 70px; }
+
+h1 { color: #0a1f44; }
+h2 { color: #0a1f44; }
+a { color: #1d4ed8; }
+
+/* ---------- Hero (homepage) ---------- */
+.hero {
+  background-color: #0a1f44;
+  color: #ffffff;
+  text-align: center;
+  padding: 70px 24px;
+}
+.hero h1 { color: #ffffff; font-size: 52px; margin-bottom: 14px; }
+.hero p { color: #cdd6ea; font-size: 18px; max-width: 620px; margin: 0 auto 24px auto; }
+
+/* ---------- Buttons ---------- */
+.button {
+  display: inline-block;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover { background-color: #1741b6; }
+.button.grey { background-color: #64748b; }
+.button.grey:hover { background-color: #475569; }
+
+/* ---------- Counters / 3-step boxes ---------- */
+.boxes { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 30px; }
+.box {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+.box .big { font-size: 30px; font-weight: bold; color: #1d4ed8; }
+
+/* ---------- Cards (founder directory / testimonials) ---------- */
+.cards { display: flex; gap: 16px; flex-wrap: wrap; }
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px;
+  flex: 1;
+  min-width: 260px;
+}
+.card h3 { margin: 0 0 4px 0; color: #0a1f44; }
+.card .tag {
+  display: inline-block;
+  background-color: #eef2ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  margin-right: 6px;
+  margin-bottom: 8px;
+}
+.card .muted { color: #6b7280; font-size: 14px; }
+
+/* ---------- Forms ---------- */
+form.box-form {
+  max-width: 560px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+}
+form.box-form label { display: block; font-weight: bold; margin-top: 14px; margin-bottom: 4px; }
+form.box-form input[type="text"],
+form.box-form input[type="password"],
+form.box-form input[type="email"],
+form.box-form select,
+form.box-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+form.box-form textarea { min-height: 80px; }
+form.box-form .actions { margin-top: 20px; }
+
+/* ---------- Tables (FAQ / events) ---------- */
+table { width: 100%; border-collapse: collapse; background-color: #ffffff; }
+th { background-color: #0a1f44; color: #ffffff; text-align: left; padding: 12px; }
+td { padding: 12px; border-bottom: 1px solid #e5e7eb; }
+
+/* ---------- Error / info pages ---------- */
+.notice {
+  max-width: 520px;
+  margin: 60px auto;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+}

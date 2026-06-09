@@ -1,0 +1,41 @@
+Basic elements of HTML programming.
+An HTML element is much more than a tag, as it is made up of:
+
+An opening label.
+Zero or more attributes.
+Text enclosed by the label.
+A closing tag
+
+
+
+
+
+
+Daily Quote
+            "Throughout the history of computing, we have witnessed major changes, 
+                revolutionary moments at all levels. Hardware and software aside, the Internet is 
+                undergoing a radical change with the emergence of the fifth version of the
+                version of the Hyper Text Markup Language (HTML5)."
+
+HTML5
+
+          Learning to code in HTML5 is essential to understand the structure of web pages.
+
+            Semantics
+            New tags were created in order to indicate mainly to search engines what the main, navigational and contextual content is. 
+                main, navigational and contextual content. In this way we help to improve indexing in case search engines do not detect the 
+                search engines do not detect the importance of each text on our website.
+
+            Multimedia
+            Added better support for multimedia content allowing audio and video playback.
+
+CSS3
+            The name Cascading Style Sheets comes from Cascading Style Sheets, from which it takes its acronym. CSS is 
+                a language used to define the presentation of a structured document written in HTML or XML.
+
+            Features
+            You get more control over the presentation of the site by being able to have all the CSS code in one place, 
+                which makes it easier to modify
+
+
+          

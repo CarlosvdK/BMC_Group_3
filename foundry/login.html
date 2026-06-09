@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foundry - Log in</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div class="nav">
+    <a class="brand" href="index.html">Foundry</a>
+    <a href="index.html">Home</a>
+    <a href="how_it_works.html">How it works</a>
+    <a href="events.html">Events</a>
+    <a href="members.php">Founder Directory</a>
+    <div class="right">
+      <a href="login.html">Log in</a>
+      <a href="new_user.html">Apply</a>
+    </div>
+  </div>
+
+  <div class="page">
+    <h1>Log in</h1>
+
+    <!-- The form sends username and password to verify.php using POST -->
+    <form class="box-form" name="login" method="POST" action="verify.php">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <div class="actions">
+        <input class="button" type="submit" value="Log in">
+        <a class="button grey" href="new_user.html">Create an account</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
